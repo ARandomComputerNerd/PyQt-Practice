@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(94, 94, 94)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="inputButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>90</y>
+      <width>291</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    border-radius: 55px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0.381, stop:0 rgba(255, 88, 0, 255), stop:1 rgba(122, 79, 255, 255));
+    
+	font: 63 23pt &quot;Segoe UI Semibold&quot;;
+}
+QPushButton:clicked
+{
+    border-radius: 10px;
+    background-color: qlineargradient(spread:pad, x1:1, y1:0.557, x2:0, y2:0, stop:0 rgba(255, 88, 0, 255), stop:1 rgba(122, 79, 255, 255))
+    
+	font: 63 23pt &quot;Segoe UI Semibold&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Select input file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logOutput">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>240</y>
+      <width>501</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    color: rgb(85, 255, 0);
+    background-color: rgb(0, 0, 0);
+	font: 10pt &quot;Consolas&quot;;
+    border: 2px grey;
+    border-radius: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Log:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>240</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    background-color: rgb(0, 0, 0, 0);
+    color: rgb(85, 255, 0);
+	font: 10pt &quot;Consolas&quot;;
+    border-radius: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Result:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>801</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    color: white;
+    
+	font: ;
+	font: 75 italic 16pt &quot;Arial&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>SigmaAV | Alpha Phase</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="result">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>270</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+     border-radius: 25px;   
+     background-color: grey;
+}</string>
+    </property>
+    <property name="text">
+     <string>No file chosen.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sigmaScore">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>330</y>
+      <width>211</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+     border-radius: 25px;   
+     background-color: grey;
+}</string>
+    </property>
+    <property name="text">
+     <string>SigmaScore: -</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
