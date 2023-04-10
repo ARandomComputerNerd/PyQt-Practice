@@ -93,6 +93,7 @@ class Ui_MainWindow(object):
         self.InfoPanel.setObjectName("InfoPanel")
         self.ProgressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.ProgressBar.setGeometry(QtCore.QRect(310, 470, 461, 51))
+        self.ProgressBar.setAlignment(Qt.AlignCenter)
         self.ProgressBar.setStyleSheet("QProgressBar\n"
 "{  \n"
 "     border-radius: 25px;\n"
