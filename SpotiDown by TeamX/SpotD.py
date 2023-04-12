@@ -93,12 +93,11 @@ class Ui_MainWindow(object):
         self.InfoPanel.setObjectName("InfoPanel")
         self.ProgressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.ProgressBar.setGeometry(QtCore.QRect(310, 470, 461, 51))
-        
         self.ProgressBar.setStyleSheet("QProgressBar\n"
 "{  \n"
 "     border-radius: 25px;\n"
 "     border: 1px solid grey;\n"
-"     \n"
+"     color: white;\n"
 "}\n"
 "QProgressBar::chunk\n"
 "{ \n"
@@ -109,6 +108,7 @@ class Ui_MainWindow(object):
 "}")
         self.ProgressBar.setProperty("value", 0)
         self.ProgressBar.setObjectName("ProgressBar")
+        self.ProgressBar.setAlignment(QtCore.Qt.AlignCenter)
         self.AboutButton = QtWidgets.QPushButton(self.centralwidget)
         self.AboutButton.setGeometry(QtCore.QRect(170, 470, 131, 51))
         self.AboutButton.setStyleSheet("QPushButton\n"
@@ -167,6 +167,7 @@ class Ui_MainWindow(object):
         yt= YouTube(self.ytlink)
         stream= yt.streams.get_audio_only()
         filepath= os.path.join(QtWidgets.QFileDialog.getExistingDirectory(None, "Select where to store the file").replace("/","\\"))
+        videopath= filepath+"\\"+stream.default_filename
         stream.download(output_path= filepath)
         self.ProgressBar.setValue(75)
         print(filepath)
@@ -175,6 +176,7 @@ class Ui_MainWindow(object):
         self.ProgressBar.setValue(85)
         print(filepath)
         clip.write_audiofile(filepath.replace(".mp4",".mp3"))
+        os.remove(videopath)
         self.ProgressBar.setValue(100)
         self.InfoPanel.setText(self.InfoPanel.text()+"\nDownloaded successfully!")
      except:
@@ -232,8 +234,9 @@ class Ui_MainWindow(object):
           self.ProgressBar.setStyleSheet("QProgressBar\n"
 "{  \n"
 "     border-radius: 25px;\n"
-"     border: 2px black;\n"
+"     border: 1px black;\n"
 "     background-color: white;\n"
+"     color: white;\n"
 "}\n"
 "QProgressBar::chunk\n"
 "{ \n"
@@ -303,6 +306,7 @@ class Ui_MainWindow(object):
 "     border-radius: 25px;\n"
 "     border: 1px solid grey;\n"
 "     background-color: black;\n"
+"     color: black;\n"
 "}\n"
 "QProgressBar::chunk\n"
 "{ \n"
@@ -343,3 +347,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
